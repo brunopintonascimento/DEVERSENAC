@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrados dos Números de 1 a 20</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .number-square {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadrados dos Números de 1 a 20</h1>
+    <div id="squares"></div>
+
+    <script>
+        const squaresDiv = document.getElementById('squares');
+
+        for (let i = 1; i <= 20; i++) {
+            const result = i * i;
+            const line = document.createElement('div');
+            line.className = 'number-square';
+            line.textContent = `${i}² = ${result}`;
+            squaresDiv.appendChild(line);
+        }
+    </script>
+</body>
+</html>
